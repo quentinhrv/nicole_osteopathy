@@ -1,0 +1,32 @@
+$font-family-main: 'Nanum Gothic', sans-serif;
+
+body {
+    font-family: $font-family-main;
+    margin: auto;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.bio {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.fa-bars {
+    font-size: 30px
+}
+
+.fa-xmark {
+    font-size: 35px;
+}

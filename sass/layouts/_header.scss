@@ -1,0 +1,156 @@
+@import '../utils/colors';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+h1, h2 {
+    color: $primary;
+    margin: 0;
+    border-right: 1.5px solid;
+    padding-right: 5px;
+}
+
+.name-box {
+    text-align: right;
+    background-color: $tertiary;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 25%;
+}
+
+.nav-menu {
+    width: 75%;
+
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: $tertiary;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    margin: 0;
+}
+
+.nav-menu li {
+    padding-right: 5%;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: $secondary;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: $secondary;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.fa-bars {
+    position: fixed;
+    right: 20px;
+    top: 28px;
+    margin-right: 20px;
+    color: $primary;
+    cursor: pointer;
+    z-index: 1;
+    visibility: hidden;
+} 
+
+.fa-xmark {
+    position: fixed;
+    right: 47px;
+    top: 25px;
+    margin-right: 20px;
+    color: $primary;
+    cursor: pointer;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+// --- BREAKPOINTS --- \\
+
+@media (max-width: 1080px) {
+
+    .name-box {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        z-index: 1;
+    }
+
+    h1, h2 {
+        border-right: none;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -200px;
+        right: 0;
+        width: auto;
+        z-index: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 20px 0 0 0;
+
+    }
+
+    .nav-menu li {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    .fa-bars {
+        visibility: visible;
+    }
+
+    .fa-bars.slide-left {
+        transform: translateX(-25px) rotate(90deg);
+        transition: transform 0.5s ease;
+    }
+    
+    .nav-menu.slide-down {
+        transform: translateY(270px);
+        transition: transform 0.5s ease;
+    }
+
+    .fa-xmark.slide-right {
+        transform: translateX(25px) rotate(-90deg);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu.slide-up {
+        transform: translateY(-270px);
+        transition: transform 1s ease;
+    }
+
+    
+    
+}
