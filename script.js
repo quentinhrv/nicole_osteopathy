@@ -37,4 +37,25 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     window.addEventListener("resize", toggleMenuIcons);
+
+    var arrowDown = document.querySelector(".fa-circle-arrow-down");
+    var arrowUp = document.querySelector(".fa-circle-arrow-up")
+    var bioSection = document.querySelector(".biography");
+
+    arrowDown.addEventListener("click", function() {
+        bioSection.classList.add("slide-up");
+        arrowUp.style.visibility = "visible";
+        bioSection.classList.remove("slide-down");
+        arrowDown.style.visibility = "hidden";
+
+    });
+
+    arrowUp.addEventListener("click", function() {
+        bioSection.classList.add("slide-down");
+        arrowUp.style.visibility = "hidden";
+        bioSection.classList.remove("slide-up");
+        arrowDown.style.visibility = "visible";
+    })
+
 });
+

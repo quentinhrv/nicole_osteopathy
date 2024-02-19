@@ -19,9 +19,7 @@ h1, h2 {
 .name-box {
     text-align: right;
     background-color: $tertiary;
-    padding-left: 50px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px 0 20px 50px;
     width: 25%;
 }
 
@@ -69,7 +67,6 @@ h1, h2 {
     position: fixed;
     right: 20px;
     top: 28px;
-    margin-right: 20px;
     color: $primary;
     cursor: pointer;
     z-index: 1;
@@ -132,7 +129,7 @@ h1, h2 {
     }
 
     .fa-bars.slide-left {
-        transform: translateX(-25px) rotate(90deg);
+        transform: translateX(-45px) rotate(90deg);
         transition: transform 0.5s ease;
     }
     
@@ -142,15 +139,50 @@ h1, h2 {
     }
 
     .fa-xmark.slide-right {
-        transform: translateX(25px) rotate(-90deg);
-        transition: transform 0.3s ease;
+        transform: translateX(45px) rotate(-90deg);
+        transition: transform 0.5s ease;
     }
 
     .nav-menu.slide-up {
         transform: translateY(-270px);
         transition: transform 1s ease;
+    }   
+}
+
+@media (max-width: 800px) {
+    .name-box {
+        text-align: left;
+        padding-left: 20px;
+        
     }
 
-    
-    
+    h2 {
+        width: 250px;
+        border-right: 1.5px solid;
+    }
+
+    h1 {
+        width: 208px;
+        padding-left: 42px;
+        border-right: 1.5px solid;
+    }
+}
+
+@media (max-width: 450px) {
+    .fa-bars.slide-left {
+        transform: rotate(90deg);
+    }
+
+    .fa-xmark.slide-right {
+        transform: rotate(-90deg);
+    }
+
+    .fa-xmark {
+        right: 2px;
+        top: 30px;
+    }
+
+    .fa-bars {
+        top: 32px;
+    }
 }

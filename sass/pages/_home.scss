@@ -26,12 +26,61 @@ h3 {
     margin: auto;
 }
 
+.bio-title {
+    position: absolute;
+    width: 50%;
+    background-color: $primary;
+    z-index: 10;
+}
+
+.biography {
+    position: absolute;
+    width: 50%;
+    top: 360px;
+}
+
 .bio {
     width: 65%;
+    min-width: 350px;
     margin: auto;
-    padding-top: 50px;
+    padding-bottom: 50px;
     line-height: 2;
     color: $tertiary;
+    position: relative;
+}
+
+.biography.slide-up {
+    transition: transform 0.3s ease-out;
+    transform: translateY(-500px);
+}
+
+.biography.slide-down {
+    transition: transform 0.3s ease-out;
+    transform: translateY(0px);
+}
+
+.arrow-icon {
+    position: absolute;
+    width: 50%;
+    top: 880px;
+    background-color: $primary;
+    z-index: 10;
+    display: none;
+}
+
+.fa-circle-arrow-down {
+    color: $tertiary;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.fa-circle-arrow-up {
+    color: $tertiary;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    visibility: hidden;
 }
 
 .image-section {
@@ -43,21 +92,82 @@ h3 {
 }
 
 
-// --- FOR WHO SECTION --- \\
 
-.for-who-section {
+// --- WHY SECTION --- \\
+
+.why-section {
     height: 900px;
     margin: auto;
     text-align: center;
 }
 
-.for-who-section h3 {
+.why-section h3 {
     color: $primary;
     padding-top: 50px;
 }
 
+
+
 // --- BREAKPOINTS --- \\
 
-@media (max-width: 1080px) {
+@media (max-width: 1169px) {
+
+    .arrow-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
     
+    // --- ABOUT SECTION --- \\
+    .about-section {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .image-section {
+        width: 100%;
+        height: 250px;
+        z-index: 10;
+    }
+
+    .bio-section {
+        width: 100%;
+        height: 680px;
+    }
+
+    h3 {
+        padding-top: 50px;
+        margin: auto;
+    }
+
+    .border {
+        margin-top: 40px;
+    }
+
+    .bio-title {
+        width: 100%;
+        height: auto;
+    }
+
+    .biography { 
+        width: 100%;
+        top: 460px;
+    }
+
+    .bio {
+        padding: 0 10px 50px 10px;
+        min-width: 300px;
+    }
+
+    .arrow-icon {
+        width: 100%;
+        top: 900px;
+    }
+
+    .biography.slide-up {
+        transition: transform 0.3s ease-out;
+        transform: translateY(-490px);
+    } 
+
 }
