@@ -59,3 +59,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+// Sélection de toutes les cartes
+const cards = document.querySelectorAll('.why-card');
+
+// Ajout d'un gestionnaire d'événement click à chaque carte
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        flipCard(card);
+    });
+});
+
+// Fonction pour retourner la carte
+function flipCard(card) {
+    card.querySelector('.why-card-inner').classList.toggle('flipped');
+}

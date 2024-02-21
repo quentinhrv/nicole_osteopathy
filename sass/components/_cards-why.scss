@@ -19,6 +19,10 @@
     transform: rotateY(180deg);
 }
 
+.why-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
 .front, .back {
     width: 100%;
     height: 100%;
