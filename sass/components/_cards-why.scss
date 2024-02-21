@@ -15,10 +15,6 @@
     transform-style: preserve-3d;
 }
 
-.why-card:hover .why-card-inner {
-    transform: rotateY(180deg);
-}
-
 .why-card-inner.flipped {
     transform: rotateY(180deg);
 }
@@ -63,4 +59,10 @@
 .why-card p {
     padding-bottom: 10px;
     color: $tertiary;
+}
+
+@media (min-width: 801px) {
+    .why-card:hover .why-card-inner {
+        transform: rotateY(180deg);
+    }
 }
